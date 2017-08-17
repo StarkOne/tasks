@@ -445,3 +445,107 @@
 
 // console.log(arr);
 // console.log(narr);
+
+// function stray(numbers) {
+//   let k = numbers[0];
+//   for(let i = 1; i<numbers.length;i++){
+//     if(numbers[i] == k){
+//       continue;
+//     } else if(numbers[i] != numbers[i-1] && numbers[i] != numbers[i+1]){
+//       return k = numbers[i];
+//     }
+//   }
+//   return k;
+// }
+
+// function stray(numbers){
+//   for (var i in numbers){
+//      if (numbers.indexOf(numbers[i]) === numbers.lastIndexOf(numbers[i])){return numbers[i]}
+//   }
+// }
+
+// function stray(numbers) {
+//   var a = numbers.sort();
+  
+//   if(a[0] != a[1]) {
+//     return a[0]
+//   } 
+//   return a[a.length-1]
+// }
+
+// alert(stray([5, 5, 8,]));
+
+// function SeriesSum(n)
+// {
+//   var sum = 1;
+//   if(n == 1){
+//   	return "1.00";
+//   }
+//   for(let i = 1; i < n; i++){
+//     if(i >= 2){
+//     	sum += 1/(0.4 + (i*0.3));
+//     } else {
+//     	sum += (1/4);
+//     }
+//   }
+//   return String(sum);
+// }
+
+// SeriesSum(5);
+
+
+// function isIsogram(str){
+//   let obj = {}
+  
+//   for(let i = 0; i<str.length;i++){
+//     obj[i] = str[i].toUpperCase();
+//   }
+//   for(let j = 0; j<str.length;j++) {
+//     if(str[j].toUpperCase() == obj[str[j].toUpperCase()]){
+//       obj[str[j]] = obj[str[j]] + 1;
+//     }
+//   }
+//   for(let k in obj){
+  	
+//   }
+//   for(let o in obj){
+//     if(o > 1){
+//       return false;
+//     }
+//     return true;
+//   }
+// }
+
+
+// isIsogram("Dermatoglyphics");
+// isIsogram("Afa");
+
+// function sortArray(array) {
+  
+//   let arr = array.filter(function(a){
+//     if(a % 2 !== 0){
+//       return a;
+//     }
+//   })
+//   arr.sort(function(a,b){
+//     return a - b;
+//   })
+//   let k = 0;
+//   for(let i = 0; i<array.length; i++){
+//     if(array[i] % 2 !== 0){
+//       array[i] = arr[k];
+//       k++;
+//     }
+//   }
+//   return array;
+// }
+
+// sortArray([5, 3, 2, 8, 1, 4]);
+
+function descendingOrder(n){
+  let str = String(n);
+  let rez = str.split("").reverse().join("");
+  return +rez;
+}
+
+alert(descendingOrder(2110));
