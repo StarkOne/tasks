@@ -542,10 +542,349 @@
 
 // sortArray([5, 3, 2, 8, 1, 4]);
 
-function descendingOrder(n){
-  let str = String(n);
-  let rez = str.split("").reverse().join("");
-  return +rez;
+// function descendingOrder(n){
+//   let str = String(n);
+//   let rez = str.split("").reverse().join("");
+//   return +rez;
+// }
+
+// alert(descendingOrder(2110));
+
+// function filter_list(l) {
+//   let arr = l.filter(function(i){
+//     if(i === 0){
+//       return i;
+//     }
+//     if(typeof i === "number"){
+//       return i;
+//     }
+//   });
+//   return arr;
+// }
+
+// filter_list([1,'a','b',0,15]);
+
+
+// function listToArray(list) {
+//   let arr = [];
+//   arr = list2(list);
+//   function list2(obj){
+// 	  for(let key in obj){
+// 	    if(key == obj.value){
+// 	      arr.push(obj[key]);
+// 	    } else {
+// 	      return list2(obj.next);
+// 	    }
+// 	  }
+// 	}
+//   return arr;
+// }
+
+
+
+// var list1 = {value: 1, next: {value: 2, next: {value: 3, next: null}}};
+// listToArray(list1);
+
+// function oddOrEven(array) {
+//    if(array.length == 1){
+//      return "even";
+//    } else if(array.length == 0){
+//      return "even";
+//    }
+   
+//    return array.length % 2 == 0 ? "odd" : "even";
+// }
+
+
+// oddOrEven([0, -1, -5])
+// oddOrEven([0, -1, 2]);
+
+// function reverseLetter(str) {
+//   let nStr = "";
+//   let n1 = str.replace(/[^a-zA-ZА-Яа-я\s]/g, '');
+//   let n2 = n1.length-1;
+
+//   while(n2 >= 0){
+//     nStr += n1[n2];
+//     n2--;
+//   }
+  
+//   return nStr;
+  
+  
+// }
+
+// reverseLetter("ultr53o?n")
+
+// function Calculator(str){
+// 	var obj = {
+// 		"+" : function(a,b){
+// 			return a + b;
+// 		},
+// 		"-" : function(a,b){
+// 			return a - b;
+// 		}
+// 	}
+// 	this.calculate = function(str){
+// 		var arr = str.split(' ');
+
+// 		for(var key in obj){
+// 			if(key == arr[1]){
+// 				return obj[key](+arr[0],+arr[2]);
+// 			}
+// 		}
+// 	}
+// 	this.addMethod = function(a,b){
+// 		obj[a] = b;
+// 	}
+// }
+
+// var calc = new Calculator;
+// console.log( calc.calculate('3 + 7') ); 
+// console.log( calc.calculate('3 - 7') ); 
+//  calc.addMethod('*', function(a, b) {
+//   return a * b;
+// });
+// calc.addMethod('/', function(a, b) {
+//   return a / b;
+// });
+// console.log( calc.calculate('3 * 7') ); 
+// console.log( calc.calculate('21 / 7') );
+
+
+
+// function sortByLength (array) {
+//   // Return an array containing the same strings, ordered from shortest to longest
+//   array.sort(function(a,b){
+//     return a.length - b.length;
+//   })
+// };
+
+// sortByLength(["Beg", "Life", "I", "To"]);
+
+// var obj = {
+//   person1Age: 20,
+//   person1Name: 'Ivanov',
+//   person2Age: 30,
+//   person2Name: 'Petrov',
+//   person3Age: 40,
+//   person3Name: 'Sidorov',
+
+//   extractNumber : function() {
+//   	var numarr = [];
+//   	for(var key in obj){
+//   		if(typeof obj[key] === "number"){
+//   			numarr.push(obj[key]);
+//   		}
+//   	}
+//   	return numarr;
+//   },
+//   extractString : function() {
+//   	var strarr = [];
+//   	for(var key in obj){
+//   		if(typeof obj[key] === "string"){
+//   			strarr.push(obj[key]);
+//   		}
+//   	}
+//   	return strarr;
+//   }
+// };
+
+// alert(obj.extractNumber());
+// alert(obj.extractString());
+
+
+// function getMaxNumber(arr) {
+// 	return Math.max.apply(this, arr);
+// }
+
+// console.log(getMaxNumber([1,30,40,2,7])); 
+// console.log(getMaxNumber([1,15,-20,2,-7])); 
+
+
+// alert(strA("webmaster"));
+
+// function str1(str) {
+// 	var nstr = "";
+// 	if(typeof str[0] === "string"){
+// 		nstr += str[0].toUpperCase();
+// 	}
+// 	for(var i = 1; i <str.length; i++){
+// 		if(str[i] == " " && typeof str[i+1] == "string"){
+// 			nstr += " " + str[i+1].toUpperCase();
+// 			continue;
+// 		}
+// 		if(str[i-1] !== " "){
+// 			nstr += str[i];
+// 		}
+// 	}
+// 	return nstr;
+// }
+
+// alert(str1("the quick brown fox"));
+
+// function longStr(str) {
+// 	var arr = str.split(" ");
+// 	var max = 0;
+// 	var n;
+
+// 	for(var i = 0; i < arr.length; i++){
+// 		if(arr[i].length > max){
+// 			max = arr[i].length;
+// 			n = arr[i];
+// 		}
+// 	}
+// 	return n;
+// }
+
+// alert(longStr("Web Development Tutorial"));
+
+// function typeArg(arg) {
+// 	return typeof arg;
+// }
+
+// alert(typeArg({}));
+// alert(typeArg(3));
+// alert(typeArg("sdd"));
+
+
+
+
+
+// var arr1 = ['link', 'menu', 'menu__item', 'menu__item', 'header', 'link', 'footer', 'sidebar', 'link'];
+
+// function sotrA(arr1){
+// 	var obj = {};
+// 	var nArr = [];
+
+// 	for(var i = 0; i < arr1.length; i++){
+// 		obj[arr1[i]] = 0;
+// 	}
+
+// 	for(var key in obj){
+// 		nArr.push(key);
+// 	}
+
+// 	return nArr;
+// }
+
+// alert(sotrA(arr1));
+
+// function descendingOrder(n){
+//   let str = String(n);
+//   let rez = str.split("");
+//   rez.sort(function(a,b){
+//     return +a < +b;
+//   });
+//   return +rez.join("");
+// }
+
+// descendingOrder(123456789);
+
+// function duplicates(arr) {
+//   let arr1 = [];
+//   for(let i = 0; i < arr.length; i++){
+//     for(let j = 1; j < arr.length; j++){
+//     	if(i === j){
+//     		continue;
+//     	}
+//       if(arr[i] === arr[j]){
+//         var nn = arr1.join("").indexOf(arr[j]);
+//         if(nn == -1){
+//           arr1.push(arr[j]);
+//           break;
+//         }
+//       }
+//     }
+//   }
+//   return arr1;
+// }
+
+// alert(duplicates([1, 2, 4, 4, 3, 3, 1, 5, 3, '5']));
+
+// function reverseIt(data){
+//   if(typeof data == "number" || typeof data == "string"){
+//     if(typeof data == "number"){
+//       let str = String(data);
+//       return Number(str.split("").reverse().join(""));
+//     }
+//     return data.split("").reverse().join("");
+//   }
+//   return data;
+// }
+
+
+
+// reverseIt(314159);
+
+
+// function fibonacci(n) {
+//   let arr = [];
+//   let a = 1,
+//       b = 1;
+//   if(n > 2){
+//     arr.push(0);
+//     arr.push(a);
+//     arr.push(b);
+//   }
+//   for(let i = 3; i <= n; i++){
+//      var c = a + b;
+//      arr.push(c);
+//      a = b;
+//      b = c;
+//   }
+//   return arr;
+// }
+
+
+// alert(fibonacci(5));
+// alert(fibonacci(-1));
+// alert(fibonacci(2));
+
+
+// function strA(str) {
+// 	var nstr = str.split("");
+// 	nstr.sort()
+// 	return nstr.join("");
+// }
+
+// alert(strA("webmaster"));
+
+
+// function isPangram(string){
+//   let count = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//   let num = 0;
+//   string = string.toUpperCase();
+//   for(let i = 0; i < count.length; i++){
+//     if(string.indexOf(count[i].toUpperCase()) !== -1){
+//       num++;
+//     }
+//   }
+//   if(num === count.length-1){
+//     return true;
+//   }
+//   return false;
+// }
+
+// var string = "The quick brown fox jumps over the lazy dog.";
+// isPangram(string);
+
+function fibonacci(n) {
+  let arr = [];
+  let a = 1,
+      b = 1;
+  if(n > 3){
+    arr.push(0);
+    arr.push(a);
+    arr.push(b);
+  }
+  for(let i = 3; i < n; i++){
+     var c = a + b;
+     a = b;
+     b = c;
+     arr.push(b);
+  }
+  return arr;
 }
 
-alert(descendingOrder(2110));
+alert(fibonacci(4));
